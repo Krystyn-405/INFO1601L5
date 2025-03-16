@@ -10,5 +10,37 @@
 <body>
 
     <script src="index.js"></script>
+    <script>
+        let arr1 = [12, 33, 4,5, -4, 8, 19, 25];
+            //map () function applies a function to transform all elements
+            function double (num){
+            return num*2;
+            }
+            let doubledArr1 = arr1.map(double);
+            console.log(doubledArr1);
+
+            //Filter () function applies a function to remove elements based on a criteria
+            function isOdd(num){
+            return num%2 !==0;
+            }
+            let odds = arr1.filter(isOdd);
+            console.log(odds);
+            
+            // some() function returns true if any of the elements of the array meats a specified condition
+            // returns true or false if any of the elements of the array meats a specified condition
+            function has5Factor(){
+                return num % 5 === 0;
+            }
+            let hasFiveFactor = arr1.some(has5Factor);
+            console.log (hasFiveFactor);
+
+            function intCompare (a,b){
+                return a-b;
+            }
+
+            //sort function must return either 0, positive or negative number
+            let ascending = arr1.sort(intCompare);
+            console.log(ascending);
+    </script>
 </body>
 </html>
